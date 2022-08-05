@@ -1,3 +1,25 @@
+# name: Publish Docker
+
+# on:
+#   push:
+#     branches: [main]
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       # - name: Onse
+#       # - uses: actions/checkout@main
+
+#       - name: Publish to git-hub registry
+#       - uses: elgohr/Publish-Docker-Github-Action@master
+#         with:
+#           registry: docker.pkg.github.com
+#           name: docker.pkg.github.com/NikolayN-ru/nestjs1-project/top-api-demo
+#           username: ${{ secrets.DOCKER_USERNAME }}
+#           password: ${{ secrets.DOCKER_PASSWORD }}
+#           tags: "develop"
+
 name: Publish Docker
 
 on:
@@ -8,11 +30,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # - name: Onse
-      # - uses: actions/checkout@main
-
-      - name: Publish to git-hub registry
-      - uses: elgohr/Publish-Docker-Github-Action@master
+      - uses: actions/checkout@master
+      - name: Publish to registy
+        uses: elgohr/Publish-Docker-Github-Action@master
         with:
           registry: docker.pkg.github.com
           name: docker.pkg.github.com/NikolayN-ru/nestjs1-project/top-api-demo
