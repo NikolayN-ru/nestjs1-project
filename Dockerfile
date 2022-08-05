@@ -8,7 +8,7 @@ WORKDIR /opt/app
 
 ADD . .
 
-RUN npm run build
+# RUN npm run build
 
 # RUN npm prune --production
 
