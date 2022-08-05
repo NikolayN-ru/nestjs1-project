@@ -8,7 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Onse
+      - uses: actions/checkout@main
+
       - name: Publish to git-hub registry
       - uses: elgohr/Publish-Docker-Github-Action@master
         with:
