@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Onse
-      - uses: actions/checkout@main
+      # - name: Onse
+      # - uses: actions/checkout@main
 
       - name: Publish to git-hub registry
       - uses: elgohr/Publish-Docker-Github-Action@master
